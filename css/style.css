@@ -1,0 +1,76 @@
+
+body,html {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+nav .hamburguer {
+    background: none;
+    outline: none;
+	display: flex;
+	place-items: center;
+	justify-content: center;
+	height: 25px;
+    position: relative;
+	float: right;
+	width: 25px;
+	cursor: pointer;
+}
+
+nav .hamburguer i {
+	background: #000;
+	display: inline-block;
+	width: 90%;
+	height: 3px;
+	border-radius: 2px;
+    transition: 600ms;
+}
+
+nav .hamburguer i::after, nav .hamburguer i::before {
+	content: '';
+	background: #000;
+	display: inline-block;
+	width: 90%;
+	border-radius: 2px;
+	height: 3px;
+    transition: 600ms;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+nav .hamburguer i::before {
+	top: 3px;
+}
+
+nav .hamburguer i::after {
+	bottom: 3px;
+}
+
+nav .open i::after, nav .open i::before {
+    left: 30%;
+    transform: translate(-30%);
+}
+
+nav .open i {
+	background: transparent;
+}
+
+nav .open i::before {
+	transform: rotate(45deg) translateY(11px);
+}
+
+nav .open i::after {
+	transform: rotate(-45deg) translateY(-11px);
+}
+
+
+/* */
+
+.section1 {
+    background: url(../images/bg.jpg) center;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+}
